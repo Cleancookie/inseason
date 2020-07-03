@@ -1,0 +1,17 @@
+{
+  "name": "inseason",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "site",
+      "scraper"
+    ],
+    "nohoist": [
+      "**/*"
+    ]
+  }
+}
