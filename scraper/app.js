@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
-
 const url = 'https://www.bbcgoodfood.com/seasonal-calendar/all';
  
 (async () => {
+  
   const browser = await puppeteer.launch({
         // headless: false,
         // slowMo: 150,
@@ -30,7 +30,7 @@ const url = 'https://www.bbcgoodfood.com/seasonal-calendar/all';
 
     // Get name of the food
     const foodName = $row('td:nth-child(1)').text();
-    food.name = foodName.trim();
+    food.name = foodName.trim().toLowerCase();
 
     // Get months
     food.bestIn = {
