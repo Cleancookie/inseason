@@ -1,9 +1,12 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
+const fs = require('fs');
 const url = 'https://www.bbcgoodfood.com/seasonal-calendar/all';
+const filePath = 'data.json';
  
 (async () => {
   
+  console.log('Launching browser');
   const browser = await puppeteer.launch({
         // headless: false,
         // slowMo: 150,
@@ -12,6 +15,7 @@ const url = 'https://www.bbcgoodfood.com/seasonal-calendar/all';
   const page = await browser.newPage();
 
   // load page
+  console.log(`Navigating to ${url}`);
   await page.goto(url);
   const $ = cheerio.load(await page.content());
   browser.close();  
@@ -51,5 +55,8 @@ const url = 'https://www.bbcgoodfood.com/seasonal-calendar/all';
     foods.push(food);
   });
 
-  console.log(foods);
+  // Write to file
+  console.log(`Saving to ${filePath}`);
+
+  fs.writeFileSync(filePath, JSON.stringify(foods));
 })();
