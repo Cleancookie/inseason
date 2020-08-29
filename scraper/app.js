@@ -24,7 +24,8 @@ const filePath = 'data.json';
   // await (await page.$('#qcCmpButtons > button:nth-child(2)')).click();
 
   // Select rows
-  const rows = $('#scrollable-section > table > tbody > tr');
+  const rows = $('.foo-table > tbody > tr');
+  console.log(`Found ${rows.count} rows`);
 
   // Go through all rows and get names
   let foods = [];
@@ -37,19 +38,19 @@ const filePath = 'data.json';
     food.name = foodName.trim().toLowerCase();
 
     // Get months
-    food.bestIn = {
-        'jan': $row('td:nth-child(2)').text().includes('At its best'),
-        'feb': $row('td:nth-child(3)').text().includes('At its best'),
-        'mar': $row('td:nth-child(4)').text().includes('At its best'),
-        'apr': $row('td:nth-child(5)').text().includes('At its best'),
-        'may': $row('td:nth-child(6)').text().includes('At its best'),
-        'jun': $row('td:nth-child(7)').text().includes('At its best'),
-        'jul': $row('td:nth-child(8)').text().includes('At its best'),
-        'aug': $row('td:nth-child(9)').text().includes('At its best'),
-        'sep': $row('td:nth-child(10)').text().includes('At its best'),
-        'oct': $row('td:nth-child(11)').text().includes('At its best'),
-        'nov': $row('td:nth-child(12)').text().includes('At its best'),
-        'dev': $row('td:nth-child(13)').text().includes('At its best'),
+    food.best = {
+      jan: $row("td:nth-child(2)").html().includes("best (1)"),
+      feb: $row("td:nth-child(3)").html().includes("best (1)"),
+      mar: $row("td:nth-child(4)").html().includes("best (1)"),
+      apr: $row("td:nth-child(5)").html().includes("best (1)"),
+      may: $row("td:nth-child(6)").html().includes("best (1)"),
+      jun: $row("td:nth-child(7)").html().includes("best (1)"),
+      jul: $row("td:nth-child(8)").html().includes("best (1)"),
+      aug: $row("td:nth-child(9)").html().includes("best (1)"),
+      sep: $row("td:nth-child(10)").html().includes("best (1)"),
+      oct: $row("td:nth-child(11)").html().includes("best (1)"),
+      nov: $row("td:nth-child(12)").html().includes("best (1)"),
+      dev: $row("td:nth-child(13)").html().includes("best (1)"),
     };
 
     foods.push(food);
