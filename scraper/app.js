@@ -1,8 +1,9 @@
 const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 const fs = require('fs');
+const path = require('path');
 const url = 'https://www.bbcgoodfood.com/seasonal-calendar/all';
-const filePath = 'data.json';
+const filePath = path.join('..', 'shared', 'data.json');
  
 (async () => {
   
@@ -59,5 +60,5 @@ const filePath = 'data.json';
   // Write to file
   console.log(`Saving to ${filePath}`);
 
-  fs.writeFileSync(filePath, JSON.stringify(foods));
+  fs.writeFileSync(filePath, JSON.stringify(foods, null, 2));
 })();
