@@ -4,17 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inseason</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <style>
+        body {
+            font-family: consolas;
+            background-color: #f5f5f5;    
+            max-width: 900px;
+            margin: auto;
+        }
+    </style>
+
 </head>
-<body>
+<body 
+    x-data="{foods: {{ .Site.Data.data | jsonify }}}"
+>
     <h1>Inseason</h1>
 
-    <ul>
-        {{ range .Site.Data.data }}
-            <li>
-                {{ .name }}
-            </li>
-        {{ end }}
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Jan</th>
+                <th>Feb</th>
+                <th>Mar</th>
+                <th>Apr</th>
+                <th>May</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Aug</th>
+                <th>Sep</th>
+                <th>Oct</th>
+                <th>Nov</th>
+                <th>Dev</th>
+            </tr>
+        </thead>
 
+        <tbody>
+            <template x-for="item in foods" :key="item.name">
+                <tr class="card">
+                    <td><h2 x-text="item.name"></h2></td>
+                    <td x-text="item.best.jan ? 'x' : ''"></td>
+                    <td x-text="item.best.feb ? 'x' : ''"></td>
+                    <td x-text="item.best.mar ? 'x' : ''"></td>
+                    <td x-text="item.best.apr ? 'x' : ''"></td>
+                    <td x-text="item.best.may ? 'x' : ''"></td>
+                    <td x-text="item.best.jun ? 'x' : ''"></td>
+                    <td x-text="item.best.jul ? 'x' : ''"></td>
+                    <td x-text="item.best.aug ? 'x' : ''"></td>
+                    <td x-text="item.best.sep ? 'x' : ''"></td>
+                    <td x-text="item.best.oct ? 'x' : ''"></td>
+                    <td x-text="item.best.nov ? 'x' : ''"></td>
+                    <td x-text="item.best.dec ? 'x' : ''"></td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
 </body>
 </html>
