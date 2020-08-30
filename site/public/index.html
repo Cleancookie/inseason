@@ -6,442 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inseason</title>
 
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
-<body>
-    <h1>Inseason</h1>
+<body 
+    x-data="{ 
+        foods: [], 
+        all: [{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;apple&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;apricot&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;asparagus&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;aubergine&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;banana&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;basil&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;beef&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;beetroot&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;blackberry&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;blackcurrants&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;bramley apple&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;broad bean&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;broccoli&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;brussels sprouts&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;cabbage&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;carrot&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;cauliflower&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;cavolo nero&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;celeriac&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;celery&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;cherry&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;chervil&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;chestnut&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;chicken&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;chicory&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;clementine&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;cod&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;courgette&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;courgette flower&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;crab&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;crab apple&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;cranberry&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;damson&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;date&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;duck&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;elderberries&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;fennel bulb&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;fig&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;garlic&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;globe artichoke&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;goose&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;gooseberry&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;grapefruit&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;grouse&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;guinea fowl&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;halibut&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;jerusalem artichoke&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;kale&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;kipper&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;kohlrabi&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;lamb&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;lamb&#39;s lettuce&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;leek&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;lemon&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;lettuce&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;loganberry&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;mackerel&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;mangetout&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;marrow&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;mint&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;mussels&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;nectarine&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;new potatoes&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;onion&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;orange&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;oyster&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;pak choi&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;parsnip&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;peach&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;pear&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;peas&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;pepper&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;plum&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;pomegranate&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;pork&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;potato&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;pumpkin&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;purple sprouting broccoli&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;quince&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;radicchio&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;radish&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;raspberry&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;redcurrant&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;rhubarb&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;runner bean&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;salmon&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;salsify&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;samphire&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;sorrel&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;spinach&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;spring greens&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:true,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;spring lamb&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:true,&#34;may&#34;:true,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;spring onion&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;strawberry&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;swede&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:true,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;sweet potato&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;sweetcorn&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;swiss chard&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;tayberry&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;tomato&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;tuna&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;turkey&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:false},&#34;name&#34;:&#34;turnip&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:false,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:false,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;venison&#34;},{&#34;best&#34;:{&#34;apr&#34;:true,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:true,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:true},&#34;name&#34;:&#34;watercress&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:false,&#34;feb&#34;:false,&#34;jan&#34;:false,&#34;jul&#34;:true,&#34;jun&#34;:false,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:false,&#34;oct&#34;:false,&#34;sep&#34;:false},&#34;name&#34;:&#34;watermelon&#34;},{&#34;best&#34;:{&#34;apr&#34;:false,&#34;aug&#34;:true,&#34;dev&#34;:true,&#34;feb&#34;:true,&#34;jan&#34;:true,&#34;jul&#34;:true,&#34;jun&#34;:true,&#34;mar&#34;:false,&#34;may&#34;:false,&#34;nov&#34;:true,&#34;oct&#34;:true,&#34;sep&#34;:true},&#34;name&#34;:&#34;whiting&#34;}] ,
+        month: null
+    }" 
+    x-init="
+        months = [
+            'jan',
+            'feb',
+            'mar',
+            'apr',
+            'may',
+            'jun',
+            'jul',
+            'aug',
+            'sep',
+            'oct',
+            'nov',
+            'dec'
+        ];
 
-    <ul>
-        
-            <li>
-                apple
-            </li>
-        
-            <li>
-                apricot
-            </li>
-        
-            <li>
-                asparagus
-            </li>
-        
-            <li>
-                aubergine
-            </li>
-        
-            <li>
-                banana
-            </li>
-        
-            <li>
-                basil
-            </li>
-        
-            <li>
-                beef
-            </li>
-        
-            <li>
-                beetroot
-            </li>
-        
-            <li>
-                blackberry
-            </li>
-        
-            <li>
-                blackcurrants
-            </li>
-        
-            <li>
-                bramley apple
-            </li>
-        
-            <li>
-                broad bean
-            </li>
-        
-            <li>
-                broccoli
-            </li>
-        
-            <li>
-                brussels sprouts
-            </li>
-        
-            <li>
-                cabbage
-            </li>
-        
-            <li>
-                carrot
-            </li>
-        
-            <li>
-                cauliflower
-            </li>
-        
-            <li>
-                cavolo nero
-            </li>
-        
-            <li>
-                celeriac
-            </li>
-        
-            <li>
-                celery
-            </li>
-        
-            <li>
-                cherry
-            </li>
-        
-            <li>
-                chervil
-            </li>
-        
-            <li>
-                chestnut
-            </li>
-        
-            <li>
-                chicken
-            </li>
-        
-            <li>
-                chicory
-            </li>
-        
-            <li>
-                clementine
-            </li>
-        
-            <li>
-                cod
-            </li>
-        
-            <li>
-                courgette
-            </li>
-        
-            <li>
-                courgette flower
-            </li>
-        
-            <li>
-                crab
-            </li>
-        
-            <li>
-                crab apple
-            </li>
-        
-            <li>
-                cranberry
-            </li>
-        
-            <li>
-                damson
-            </li>
-        
-            <li>
-                date
-            </li>
-        
-            <li>
-                duck
-            </li>
-        
-            <li>
-                elderberries
-            </li>
-        
-            <li>
-                fennel bulb
-            </li>
-        
-            <li>
-                fig
-            </li>
-        
-            <li>
-                garlic
-            </li>
-        
-            <li>
-                globe artichoke
-            </li>
-        
-            <li>
-                goose
-            </li>
-        
-            <li>
-                gooseberry
-            </li>
-        
-            <li>
-                grapefruit
-            </li>
-        
-            <li>
-                grouse
-            </li>
-        
-            <li>
-                guinea fowl
-            </li>
-        
-            <li>
-                halibut
-            </li>
-        
-            <li>
-                jerusalem artichoke
-            </li>
-        
-            <li>
-                kale
-            </li>
-        
-            <li>
-                kipper
-            </li>
-        
-            <li>
-                kohlrabi
-            </li>
-        
-            <li>
-                lamb
-            </li>
-        
-            <li>
-                lamb&#39;s lettuce
-            </li>
-        
-            <li>
-                leek
-            </li>
-        
-            <li>
-                lemon
-            </li>
-        
-            <li>
-                lettuce
-            </li>
-        
-            <li>
-                loganberry
-            </li>
-        
-            <li>
-                mackerel
-            </li>
-        
-            <li>
-                mangetout
-            </li>
-        
-            <li>
-                marrow
-            </li>
-        
-            <li>
-                mint
-            </li>
-        
-            <li>
-                mussels
-            </li>
-        
-            <li>
-                nectarine
-            </li>
-        
-            <li>
-                new potatoes
-            </li>
-        
-            <li>
-                onion
-            </li>
-        
-            <li>
-                orange
-            </li>
-        
-            <li>
-                oyster
-            </li>
-        
-            <li>
-                pak choi
-            </li>
-        
-            <li>
-                parsnip
-            </li>
-        
-            <li>
-                peach
-            </li>
-        
-            <li>
-                pear
-            </li>
-        
-            <li>
-                peas
-            </li>
-        
-            <li>
-                pepper
-            </li>
-        
-            <li>
-                plum
-            </li>
-        
-            <li>
-                pomegranate
-            </li>
-        
-            <li>
-                pork
-            </li>
-        
-            <li>
-                potato
-            </li>
-        
-            <li>
-                pumpkin
-            </li>
-        
-            <li>
-                purple sprouting broccoli
-            </li>
-        
-            <li>
-                quince
-            </li>
-        
-            <li>
-                radicchio
-            </li>
-        
-            <li>
-                radish
-            </li>
-        
-            <li>
-                raspberry
-            </li>
-        
-            <li>
-                redcurrant
-            </li>
-        
-            <li>
-                rhubarb
-            </li>
-        
-            <li>
-                runner bean
-            </li>
-        
-            <li>
-                salmon
-            </li>
-        
-            <li>
-                salsify
-            </li>
-        
-            <li>
-                samphire
-            </li>
-        
-            <li>
-                sorrel
-            </li>
-        
-            <li>
-                spinach
-            </li>
-        
-            <li>
-                spring greens
-            </li>
-        
-            <li>
-                spring lamb
-            </li>
-        
-            <li>
-                spring onion
-            </li>
-        
-            <li>
-                strawberry
-            </li>
-        
-            <li>
-                swede
-            </li>
-        
-            <li>
-                sweet potato
-            </li>
-        
-            <li>
-                sweetcorn
-            </li>
-        
-            <li>
-                swiss chard
-            </li>
-        
-            <li>
-                tayberry
-            </li>
-        
-            <li>
-                tomato
-            </li>
-        
-            <li>
-                tuna
-            </li>
-        
-            <li>
-                turkey
-            </li>
-        
-            <li>
-                turnip
-            </li>
-        
-            <li>
-                venison
-            </li>
-        
-            <li>
-                watercress
-            </li>
-        
-            <li>
-                watermelon
-            </li>
-        
-            <li>
-                whiting
-            </li>
-        
-    </ul>
+        monthShortToLong = {
+            'jan': 'January',
+            'feb': 'February',
+            'mar': 'March',
+            'apr': 'April',
+            'may': 'May',
+            'jun': 'June',
+            'jul': 'July',
+            'aug': 'August',
+            'sep': 'September',
+            'oct': 'October',
+            'nov': 'November',
+            'dec': 'December'
+        };
+        monthShort = months[new Date().getMonth()];
+        month = monthShortToLong[monthShort]
 
+        foods = all.filter((food) => { return food.best[monthShort] })
+
+        console.log(month)
+    "
+
+    class="bg-gray-200"
+>
+        <div class="container flex flex-col mx-auto justify-center content-center">
+            <div class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl rounded-lg p-4 mt-12 mx-4 bg-white">
+                <h1 class="text-center title-font text-4xl text-gray-800">Foods in season for the month <span class="font-medium underline text-purple-600" x-text='month'></span></h1>
+
+                <template x-for='(item, index) in foods' :key='index'>
+                    <p x-text='item.name' class="capitalize mt-3"></p>
+                </template>
+            </div>
+        </div>
 </body>
 </html>
