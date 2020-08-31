@@ -1,7 +1,8 @@
 baseURL: "https://inseason.now.sh"
 languageCode: "en-gb"
-title: "In Season"
+title: "What's in Season"
 disableKinds:
   - taxonomy
   - term
   - RSS
+assetDir: "assets"

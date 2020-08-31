@@ -12,9 +12,7 @@ const tailwindcss = require('tailwindcss')
  |
  */
 
-mix
-  .js('src/js/app.js', 'static/js/')
-  .sass('src/scss/app.scss', 'static/css/');
+mix.js("src/js/app.js", "assets/js/").sass("src/scss/app.scss", "assets/css/");
 
 // Full API
 // mix.js(src, output);
