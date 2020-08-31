@@ -1,7 +1,6 @@
 baseURL: "https://whatsinseason.today"
 languageCode: "en-gb"
 title: "Inseason"
-theme: "inseason"
 disableKinds:
   - taxonomy
   - term
