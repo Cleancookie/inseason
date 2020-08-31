@@ -1,5 +1,8 @@
-baseURL: "http://inseason.test"
+baseURL: "https://whatsinseason.today"
 languageCode: "en-gb"
 title: "Inseason"
 theme: "inseason"
-publishDir: "../docs"
+disableKinds:
+  - taxonomy
+  - term
+  - RSS

@@ -3,15 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://inseason.test/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://inseason.test/</loc>
-  </url>
-  
-  <url>
-    <loc>http://inseason.test/tags/</loc>
+    <loc>https://whatsinseason.today/</loc>
   </url>
   
 </urlset>
