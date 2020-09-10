@@ -6,3 +6,4 @@ disableKinds:
   - term
   - RSS
 assetDir: "assets"
+writeStats: true

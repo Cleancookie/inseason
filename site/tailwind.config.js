@@ -1,10 +1,10 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: [
-      './layouts/**/*.html'
-    ],
-  },
+  // purge: {
+  //   enabled: true,
+  //   content: [
+  //     './layouts/**/*.html'
+  //   ],
+  // },
   theme: {
     extend: {},
   },
