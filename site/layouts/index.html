@@ -36,51 +36,13 @@
     <script type="text/javascript" src="{{ $js.Permalink }}" defer></script>
 </head>
 <body 
-    x-data="{ 
-        foods: [], 
-        all: {{ .Site.Data.data | jsonify }} ,
-        month: null
-    }" 
-    x-init="
-        months = [
-            'jan',
-            'feb',
-            'mar',
-            'apr',
-            'may',
-            'jun',
-            'jul',
-            'aug',
-            'sep',
-            'oct',
-            'nov',
-            'dec'
-        ];
-
-        monthShortToLong = {
-            'jan': 'January',
-            'feb': 'February',
-            'mar': 'March',
-            'apr': 'April',
-            'may': 'May',
-            'jun': 'June',
-            'jul': 'July',
-            'aug': 'August',
-            'sep': 'September',
-            'oct': 'October',
-            'nov': 'November',
-            'dec': 'December'
-        };
-        monthShort = months[new Date().getMonth()];
-        month = monthShortToLong[monthShort]
-
-        foods = all.filter((food) => { return food.best[monthShort] })
-    "
-
+    x-data="initApp({{ .Site.Data.data | jsonify }})" 
     class="bg-gray-200 flex flex-col items-center"
 >
-    <div class="max-w-lg rounded-lg px-6 py-4 mt-12 mx-2 bg-white">
-        <h1 class="text-center title-font text-3xl text-gray-800">What's in season in <span class="font-medium underline text-purple-600" x-text='month'></span>?</h1>
+    <div class="w-full rounded-lg px-6 py-4 mt-12 mx-2 bg-white">
+        <h1 class="text-center title-font text-3xl text-gray-800">What's in season in <span class="font-medium underline text-purple-600" x-text=" (new Date(1, month, 1)).toLocaleString('default', { month: 'long' }) "></span>?</h1>
+        <span @click="prevMonth()">Prev</span> | <span @click="nextMonth()">Next</span>
+        <p>Count: <span x-text="foods.length"></span></p>
 
         <template x-for='(item, index) in foods' :key='item.name'>
             <div class="block flex flex-row justify-between my-4 items-center">
@@ -90,7 +52,6 @@
                     :href='"https://www.tesco.com/groceries/en-GB/search?query=" + item.name' 
                     class="inline text-center flex-none mx-2" 
                     target="_blank"
-                    rel="noopener"
                     rel="noreferrer"
                 >
                     <img src="/images/shops/tesco.jpg" alt="Tesco" class="h-12">
