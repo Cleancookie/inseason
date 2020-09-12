@@ -1,4 +1,4 @@
-module.exports = {
+let settings = {
   purge: {
     enabled: true,
     content: [
@@ -11,3 +11,9 @@ module.exports = {
   variants: {},
   plugins: [],
 }
+
+if (process.env.NODE_ENV != 'production') {
+  settings.purge.enabled = false;
+}
+
+module.exports = settings;
