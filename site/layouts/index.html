@@ -39,8 +39,8 @@
     x-data="initApp({{ .Site.Data.data | jsonify }})" 
     class="bg-gray-200 flex flex-col items-center"
 >
-    <div class="rounded-lg px-6 py-4 mt-12 mx-2 bg-white">
-        <h1 class="text-center title-font text-3xl text-gray-800">
+    <div class="rounded-lg py-4 mt-12 mx-2 bg-white notebook">
+        <h1 class="text-center title-font text-3xl text-gray-800 pl-4 xs:pl-24 pr-4 mt-6 pb-2 border-b">
             What's in season in 
             <select x-model="month" class="text-purple-600 border-b-2 border-purple-600 bg-white">
                 <option value="1">January</option>
@@ -61,28 +61,21 @@
 
         <template x-for='(item, index) in foods' :key='item.name'>
             <div 
-                class="flex flex-row justify-between my-4 items-center" 
+                class="flex flex-row justify-between py-2 pl-4 xs:pl-24 pr-4 items-center border-b" 
                 x-show.transition.duration.500ms="item.best[shortMonthName(month)]"
             >
                 <p x-text='item.name' class="capitalize inline flex-1"></p>
 
-                <a 
-                    :href='"https://www.tesco.com/groceries/en-GB/search?query=" + item.name' 
-                    class="inline text-center flex-none mx-2" 
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <img src="/images/shops/tesco.jpg" alt="Tesco" class="h-12">
-                </a>
-                <a 
-                    :href='"https://groceries.asda.com/search/" + item.name' 
-                    class="inline text-center flex-none mx-2" 
-                    target="_blank"
-                    rel="noopener"
-                    rel="noreferrer"
-                >
-                    <img src="/images/shops/asda.jpg" alt="Asda" class="h-12">
-                </a>
+                <span class="hidden xs:flex flex-row">
+                    <a :href='"https://www.tesco.com/groceries/en-GB/search?query=" + item.name' class="inline text-center flex-none mx-2"
+                        target="_blank" rel="noreferrer">
+                        <img src="/images/shops/tesco.jpg" alt="Tesco" class="h-8">
+                    </a>
+                    <a :href='"https://groceries.asda.com/search/" + item.name' class="inline text-center flex-none mx-2" target="_blank"
+                        rel="noopener" rel="noreferrer">
+                        <img src="/images/shops/asda.jpg" alt="Asda" class="h-8">
+                    </a>
+                </span>
             </div>
         </template>
     </div>

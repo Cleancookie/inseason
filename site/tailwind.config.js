@@ -1,16 +1,18 @@
 let settings = {
   purge: {
     enabled: true,
-    content: [
-      './layouts/**/*.html'
-    ],
+    content: ["./layouts/**/*.html"]
   },
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: "320px"
+      }
+    }
   },
   variants: {},
-  plugins: [],
-}
+  plugins: []
+};
 
 if (process.env.NODE_ENV != 'production') {
   settings.purge.enabled = false;
