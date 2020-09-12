@@ -1,12 +1,5 @@
 import "alpinejs";
 
-const filterFoods = (foods, shortMonthName) => {
-  shortMonthName = shortMonthName.toLowerCase();
-  return foods.filter(food => {
-    return food.best[shortMonthName];
-  });
-}
-
 const shortMonthName = (monthNum = 0) => {
   return new Date(1, monthNum, 1).toLocaleString("default", {
     month: "short"
@@ -15,19 +8,19 @@ const shortMonthName = (monthNum = 0) => {
 
 window.initApp = function(hugoFoods) {
   return {
-    foods: filterFoods(
-      hugoFoods,
-      shortMonthName()
-    ),
-    all: hugoFoods,
+    foods: hugoFoods,
     month: new Date().getMonth(),
     prevMonth() {
       this.month--;
-      this.foods = filterFoods(hugoFoods, shortMonthName(this.month));
     },
     nextMonth() {
       this.month++;
-      this.foods = filterFoods(hugoFoods, shortMonthName(this.month));
+    },
+    countVisible(items) {
+      return items.reduce((carry, item) => { return carry + (item.best[shortMonthName(this.month)] ? 1 : 0)}, 0);
+    },
+    shortMonthName(monthNum) {
+      return shortMonthName(monthNum);
     }
   };
 }

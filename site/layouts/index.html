@@ -39,13 +39,31 @@
     x-data="initApp({{ .Site.Data.data | jsonify }})" 
     class="bg-gray-200 flex flex-col items-center"
 >
-    <div class="w-full rounded-lg px-6 py-4 mt-12 mx-2 bg-white">
-        <h1 class="text-center title-font text-3xl text-gray-800">What's in season in <span class="font-medium underline text-purple-600" x-text=" (new Date(1, month, 1)).toLocaleString('default', { month: 'long' }) "></span>?</h1>
-        <span @click="prevMonth()">Prev</span> | <span @click="nextMonth()">Next</span>
-        <p>Count: <span x-text="foods.length"></span></p>
+    <div class="rounded-lg px-6 py-4 mt-12 mx-2 bg-white">
+        <h1 class="text-center title-font text-3xl text-gray-800">
+            What's in season in 
+            <select x-model="month" class="text-purple-600 border-b-2 border-purple-600">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+        ?
+        </h1>
 
         <template x-for='(item, index) in foods' :key='item.name'>
-            <div class="block flex flex-row justify-between my-4 items-center">
+            <div 
+                class="flex flex-row justify-between my-4 items-center" 
+                x-show.transition.duration.500ms="item.best[shortMonthName(month)]"
+            >
                 <p x-text='item.name' class="capitalize inline flex-1"></p>
 
                 <a 
