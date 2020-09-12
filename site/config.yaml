@@ -1,4 +1,4 @@
-baseURL: "https://inseason.now.sh"
+baseURL: ""
 languageCode: "en-gb"
 title: "What's in Season"
 disableKinds:
