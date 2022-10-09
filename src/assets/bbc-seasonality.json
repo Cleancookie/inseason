@@ -1,0 +1,1821 @@
+[
+  {
+    "name": "apple",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "apricot",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "asparagus",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "aubergine",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "banana",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "basil",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "beef",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "beetroot",
+    "best": {
+      "jan": true,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "blackberry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "blackcurrants",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "bramley apple",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": true
+    }
+  },
+  {
+    "name": "broad bean",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "broccoli",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "brussels sprouts",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "cabbage",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "carrot",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "cauliflower",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "cavolo nero",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "celeriac",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "celery",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "cherry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "chervil",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "chestnut",
+    "best": {
+      "jan": true,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "chicken",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "chicory",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "clementine",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "cod",
+    "best": {
+      "jan": false,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "courgette",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "courgette flower",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "crab",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "crab apple",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "cranberry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "damson",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "date",
+    "best": {
+      "jan": true,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "duck",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "elderberries",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "fennel bulb",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "fig",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "garlic",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "globe artichoke",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "goose",
+    "best": {
+      "jan": true,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "gooseberry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "grapefruit",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": true
+    }
+  },
+  {
+    "name": "grouse",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "guinea fowl",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "halibut",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "jerusalem artichoke",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "kale",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "kipper",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "kohlrabi",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "lamb",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "lamb's lettuce",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "leek",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "lemon",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "lettuce",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "loganberry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "mackerel",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "mangetout",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "marrow",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "mint",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "mussels",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "nectarine",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "new potatoes",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "onion",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "orange",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "oyster",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "pak choi",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "parsnip",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "peach",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "pear",
+    "best": {
+      "jan": true,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "peas",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "pepper",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "plum",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "pomegranate",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "pork",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "potato",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "pumpkin",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "purple sprouting broccoli",
+    "best": {
+      "jan": false,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "quince",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "radicchio",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "radish",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "raspberry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "redcurrant",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "rhubarb",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "runner bean",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "salmon",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "salsify",
+    "best": {
+      "jan": true,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "samphire",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "sorrel",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "spinach",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "spring greens",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "spring lamb",
+    "best": {
+      "jan": false,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "spring onion",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "strawberry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "swede",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "sweet potato",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": true,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "sweetcorn",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "swiss chard",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": false
+    }
+  },
+  {
+    "name": "tayberry",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "tomato",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "tuna",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "turkey",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": true
+    }
+  },
+  {
+    "name": "turnip",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "venison",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": false,
+      "aug": false,
+      "sep": false,
+      "oct": false,
+      "nov": true,
+      "dec": true
+    }
+  },
+  {
+    "name": "watercress",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": true,
+      "may": true,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "watermelon",
+    "best": {
+      "jan": false,
+      "feb": false,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": false,
+      "jul": true,
+      "aug": true,
+      "sep": false,
+      "oct": false,
+      "nov": false,
+      "dec": false
+    }
+  },
+  {
+    "name": "whiting",
+    "best": {
+      "jan": true,
+      "feb": true,
+      "mar": false,
+      "apr": false,
+      "may": false,
+      "jun": true,
+      "jul": true,
+      "aug": true,
+      "sep": true,
+      "oct": true,
+      "nov": true,
+      "dec": true
+    }
+  }
+]
