@@ -1,18 +1,5 @@
-<script>
-
-export default {
-    props: ['modelValue'],
-    emits: ['update:modelValue'],
-    methods: {
-        updateMonth(event) {
-            this.$emit('update:modelValue', event.target.value);
-        }
-    }
-}
-
-</script>
-
 <template>
+    Inside: {{modelValue}}
     <select name="month" id="month" v-model="modelValue" @input="updateMonth" class="text-purple-600 border-b-2 border-purple-600 bg-white">
         <option value="0">January</option>
         <option value="1">February</option>
@@ -28,3 +15,17 @@ export default {
         <option value="11">December</option>
     </select>
 </template>
+
+<script>
+
+export default {
+    props: ['modelValue'],
+    emits: ['update:modelValue'],
+    methods: {
+        updateMonth(event) {
+            this.$emit('update:modelValue', event.target.value);
+        }
+    }
+}
+
+</script>
