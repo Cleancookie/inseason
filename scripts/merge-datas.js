@@ -14,7 +14,7 @@ const monthsToInt = {
     nov: 10,
     dec: 11
 };
-let bbc = fs.readFileSync(`${assets}/bbc-seasonality.json`, 'utf8');
+let bbc = fs.readFileSync(`${assets}/bbc.json`, 'utf8');
 let vegsoc = fs.readFileSync(`${assets}/vegsoc.json`, 'utf8');
 let results = {
     0: [],
