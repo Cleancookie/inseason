@@ -1,8 +1,0 @@
-baseURL: ""
-languageCode: "en-gb"
-title: "What's in Season"
-disableKinds:
-  - taxonomy
-  - term
-  - RSS
-assetDir: "assets"
