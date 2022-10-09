@@ -2,7 +2,6 @@
   <div class=" bg-white rounded notebook rounded-xl py-4" style="max-width: 38rem;">
     <section class="text-4xl border-b text-center p-2 pl-16">
       <h1>What's in season in <MonthSelector v-model="month" />?</h1>
-      <p>Outside: {{month}}</p>
     </section>
     <section class="text-xl">
       <ul>

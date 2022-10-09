@@ -1,5 +1,4 @@
 <template>
-    Inside: {{modelValue}}
     <select name="month" id="month" v-model="modelValue" @input="updateMonth" class="text-purple-600 border-b-2 border-purple-600 bg-white">
         <option value="0">January</option>
         <option value="1">February</option>
