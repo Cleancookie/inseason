@@ -26,7 +26,7 @@ let months = [
 let results = {};
 
 for (let month in months) {
-    results[months[month]] = foods[month];
+    results[month] = foods[month];
 }
 
 fs.writeFileSync(`${storage}/seasonality.json`, JSON.stringify(results, null, 2));

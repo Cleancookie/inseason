@@ -1,31 +1,51 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import MonthSelector from './components/MonthSelector.vue';
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class=" bg-white rounded notebook rounded-xl py-4" style="max-width: 38rem;">
+    <section class="text-4xl border-b text-center p-2 pl-16">
+      <h1>What's in season in <MonthSelector v-model="month" />?</h1>
+    </section>
+    <section class="text-xl">
+      <ul>
+        <li v-for="(food, index) in foods" :key="index" class="border-b p-2 pl-16">
+          {{ food }}
+        </li>
+      </ul>
+    </section>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script>
+import seasonality from './assets/seasonality.json';
+
+export default {
+  data() {
+    return {
+      month: (new Date()).getMonth()
+    }
+  },
+  computed: {
+    foods() {
+      return seasonality[this.month];
+    }
+  }
+}
+
+</script>
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.notebook {
+  margin: auto;
+  position: relative;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.notebook::before {
+  content: " ";
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  border-left: 1px solid red;
+  margin-left: 3rem;
 }
 </style>

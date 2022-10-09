@@ -1,5 +1,5 @@
 {
-  "January": [
+  "0": [
     "Apples",
     "Beetroot",
     "Brussels Sprouts",
@@ -24,7 +24,7 @@
     "Turnips",
     "White Cabbage"
   ],
-  "February": [
+  "1": [
     "Apples",
     "Beetroot",
     "Brussels Sprouts",
@@ -48,7 +48,7 @@
     "Swedes",
     "White Cabbage"
   ],
-  "March": [
+  "2": [
     "Artichoke",
     "Beetroot",
     "Carrots",
@@ -63,7 +63,7 @@
     "Spring Onions",
     "Watercress"
   ],
-  "April": [
+  "3": [
     "Artichoke",
     "Beetroot",
     "Carrots",
@@ -81,7 +81,7 @@
     "Spring Onions",
     "Watercress"
   ],
-  "May": [
+  "4": [
     "Artichoke",
     "Asparagus",
     "Aubergine",
@@ -106,7 +106,7 @@
     "Sweetheart Cabbage",
     "Watercress"
   ],
-  "June": [
+  "5": [
     "Asparagus",
     "Aubergine",
     "Beetroot",
@@ -144,7 +144,7 @@
     "Turnips",
     "Watercress"
   ],
-  "July": [
+  "6": [
     "Aubergine",
     "Beetroot",
     "Blackberries",
@@ -188,7 +188,7 @@
     "Turnips",
     "Watercress"
   ],
-  "August": [
+  "7": [
     "Aubergine",
     "Beetroot",
     "Blackberries",
@@ -239,7 +239,7 @@
     "Watercress",
     "White Cabbage"
   ],
-  "September": [
+  "8": [
     "Aubergine",
     "Beetroot",
     "Blackberries",
@@ -291,7 +291,7 @@
     "Wild Mushrooms",
     "White Cabbage"
   ],
-  "October": [
+  "9": [
     "Aubergine",
     "Apples",
     "Beetroot",
@@ -341,7 +341,7 @@
     "Winter Squash",
     "White Cabbage"
   ],
-  "November": [
+  "10": [
     "Apples",
     "Beetroot",
     "Brussels Sprouts",
@@ -374,7 +374,7 @@
     "Winter Squash",
     "White Cabbage"
   ],
-  "December": [
+  "11": [
     "Apples",
     "Beetroot",
     "Brussels Sprouts",
